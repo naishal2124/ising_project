@@ -1,6 +1,6 @@
 import numpy as np
-from ising import IsingModel
-from cluster import ClusterUpdater
+from src.ising import IsingModel
+from src.cluster import ClusterUpdater
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 import time

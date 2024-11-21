@@ -1,4 +1,4 @@
-from ising import IsingModel
+from src.ising import IsingModel
 import numpy as np
 import time
 from typing import List, Dict, Tuple, Set

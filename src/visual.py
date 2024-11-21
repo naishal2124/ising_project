@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, PillowWriter
-from ising import IsingModel
-from cluster import ClusterUpdater
+from src.ising import IsingModel
+from src.cluster import ClusterUpdater
 import time
 from typing import Tuple, List, Dict, Set
 from tqdm import tqdm

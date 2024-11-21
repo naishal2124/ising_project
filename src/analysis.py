@@ -9,6 +9,9 @@ from concurrent.futures import ProcessPoolExecutor
 import psutil
 import warnings
 
+from src.ising import IsingModel
+from src.cluster import ClusterUpdater
+
 @dataclass
 class SimulationParameters:
     """Encapsulates simulation parameters for reproducibility."""
