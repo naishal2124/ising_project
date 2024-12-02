@@ -182,6 +182,3 @@ def create_interactive_visualization(L: int = 50):
     # Show interactive visualization
     print("\nStarting interactive visualization...")
     viz.show_evolution()
-
-if __name__ == "__main__":
-    create_interactive_visualization(L=50)
