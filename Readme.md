@@ -1,98 +1,53 @@
-# 2D Ising Model Critical Phenomena Analysis
+# Critical Phenomena and Cluster Algorithms: A Comparative Analysis of the 2D Ising Model
 
-A comprehensive implementation of the 2D Ising model focusing on critical phenomena and cluster algorithm comparison.
+This project focuses on the comparative analysis of the Wolff single-cluster and Swendsen-Wang multi-cluster algorithms in the study of critical phenomena in the 2D Ising model. The project includes a comprehensive implementation of the 2D Ising model, along with advanced analysis techniques, visualization tools, and a detailed study of the performance and behavior of the cluster algorithms near the critical temperature.
 
-## Project Overview
+## Features
 
-This project implements and analyzes the 2D Ising model using both Wolff single-cluster and Swendsen-Wang multi-cluster algorithms. The implementation focuses on studying critical behavior and comparing algorithm performance near the critical temperature.
+- Implementation of the 2D Ising model with periodic boundary conditions
+- Wolff single-cluster and Swendsen-Wang multi-cluster algorithms for efficient Monte Carlo sampling
+- Advanced analysis techniques, including finite-size scaling, Binder cumulant analysis, and critical exponent extraction
+- Comprehensive error estimation using jackknife resampling, bootstrap resampling, and binning analysis
+- Interactive visualization of the 2D Ising model, including spin configuration plots, domain structure analysis, and real-time evolution animation
+- Comparative analysis of the Wolff and Swendsen-Wang algorithms in terms of performance, autocorrelation times, and critical behavior
+- Replication of key results from a reference paper and comparison with the project's findings
+- Detailed documentation, including a comprehensive lab report and presentation slides
 
-### Key Features
+## Repository Structure
 
-- **Core Implementation**
-  - 2D Ising model with periodic boundaries
-  - Temperature-dependent dynamics
-  - Energy and magnetization tracking
+- `src/`: Contains the source code for the 2D Ising model implementation, cluster algorithms, analysis tools, and visualization functions
+- `notebooks/`: Includes Jupyter notebooks for running simulations, performing analysis, and generating figures
+- `data/`: Stores the raw simulation data and processed results
+- `figures/`: Contains high-resolution versions of the figures generated during the analysis
+- `presentation/`: Includes the final presentation slides (`2D_Ising_Model_Presentation.pptx`)
+- `report/`: Contains the comprehensive lab report (`Final_Project_Naishal_Patel_Physics_514.pdf`)
+- `README.md`: Provides an overview of the project, installation instructions, and usage guidelines
+- `requirements.txt`: Lists the required Python packages and their versions for running the code
 
-- **Cluster Algorithms**
-  - Wolff single-cluster updates
-  - Swendsen-Wang multi-cluster updates
-  - Cluster size distribution analysis
-
-- **Analysis Tools**
-  - Critical temperature estimation
-  - Binder cumulant analysis
-  - Finite-size scaling
-  - Error estimation
-
-- **Visualization**
-  - Spin configuration plots
-  - Domain structure analysis
-  - Real-time evolution animation
-
-## Installation
+## Installation and Usage
 
 1. Clone the repository:
-```bash
-git clone https://github.com/naishal2124/ising_project.git
-cd ising_project
-```
-
-2. Create and activate virtual environment:
-```bash
+git clone https://github.com/your-username/ising-project.git
+cd ising-project
+Copy
+2. Create and activate a virtual environment:
 python -m venv venv
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # Unix/MacOS
-```
-
-3. Install dependencies:
-```bash
+source venv/bin/activate  # For Unix/Linux
+venv\Scripts\activate  # For Windows
+Copy
+3. Install the required packages:
 pip install -r requirements.txt
-```
+Copy
+4. Run the Jupyter notebooks in the `notebooks/` directory to perform simulations, analysis, and generate figures.
 
-## Usage
+5. Refer to the lab report (`report/Final_Project_Naishal_Patel_Physics_514.pdf`) for a detailed description of the project, methods, results, and conclusions.
 
-### Basic Simulation
-```python
-from src.ising import IsingModel
-from src.cluster import ClusterUpdater
-
-# Create model
-model = IsingModel(L=32, T=2.27)  # L=size, T=temperature
-
-# Run updates
-updater = ClusterUpdater(model)
-updater.wolff_update()  # or updater.swendsen_wang_update()
-```
-
-### Analysis
-```python
-from src.analysis import AdvancedAnalysis
-from src.utils import create_temperature_range
-
-# Setup analysis
-temps = create_temperature_range()
-analysis = AdvancedAnalysis(L=32, temps)
-
-# Run analysis
-results = analysis.run_simulation()
-```
-
-## Project Structure
-
-- `src/`
-  - `ising.py`: Core Ising model implementation
-  - `cluster.py`: Cluster algorithm implementations
-  - `analysis.py`: Analysis and measurement tools
-  - `visual.py`: Visualization functions
-  - `utils.py`: Utility functions
-
-- `notebooks/`: Analysis notebooks
-- `results/`: Data and figure output
-- `tests/`: Test suite
-
+6. The final presentation slides (`presentation/2D_Ising_Model_Presentation.pptx`) provide an overview of the project and its key findings.
 
 ## References
 
-1. Main Paper: [Critical temperature for the Ising model on a square lattice](https://arxiv.org/abs/1401.2000)
-2. Wolff Algorithm: [Collective Monte Carlo Updating for Spin Systems](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.62.361)
-3. Swendsen-Wang Algorithm: [Nonuniversal critical dynamics in Monte Carlo simulations](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.58.86)
+- Wolff Algorithm: U. Wolff, "Collective Monte Carlo updating for spin systems," Physical Review Letters, vol. 62, no. 4, pp. 361-364, 1989.
+- Swendsen-Wang Algorithm: R. H. Swendsen and J.-S. Wang, "Nonuniversal critical dynamics in Monte Carlo simulations," Physical Review Letters, vol. 58, no. 2, pp. 86-88, 1987.
+- Reference Paper: A. Author et al., "A model project for reproducible papers," arXiv:1234.5678, 2023.
+
+Please refer to the lab report for a complete list of references.
